@@ -15,12 +15,20 @@
 # y cuante cuantes números son negativos y cuantos números son mayor o igual a cero
 # Tener en cuenta que "range" no incluye el número de "fin" en su secuencia,
 # sino que va hasta el anterior
-
+positivos=0
+negativos=0
 inicio = int(input('Ingrese el primer número de la secuencia\n'))
 fin = int(input('Ingrese el último número de la secuencia\n'))
 
-cantidad_numeros_positivos = 0  # Inicializo el contador en 0
+for numero in range(inicio,fin+1):
+    if(numero >= 0):
+        positivos +=1
+    else:
+        negativos +=1
 
+print("Cantidad de numeros positivos: ",positivos)
+print("Cantidad de numeros negativos: ",negativos)        
+    
 # for ... in range(....)
 
 # Imprimir el valor de la cantidad de números positivos y negativos
